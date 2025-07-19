@@ -41,9 +41,15 @@ header {
 .nav-bar,
 .banner,
 .teams,
-.features {
+.features,
+.fact,
+.sponsor,
+footer {
 	max-width: 1440px;
 	margin: 0 auto;
+}
+main > section {
+	margin-top: 130px;
 }
 
 /* nav styles */
@@ -172,13 +178,79 @@ header {
 	font-size: 1.5rem;
 	font-weight: 500;
 }
+
+/* fact section styles */
+.fact {
+	margin-top: 130px;
+}
+.fact p {
+	max-width: 540px;
+}
+.fact-card-container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+}
+.fact-card {
+	display: flex;
+	width: 240px;
+	height: 240px;
+	border: #ff900e solid 1px;
+	border-radius: 8px;
+	/* line-height: 0; */
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.fact-card h4 {
+	font-size: 2.8rem;
+	font-weight: 600;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.fact-card h5 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+/* sponsor section styles */
+.sponsor {
+	margin-top: 130px;
+	text-align: center;
+}
+.sponsor-container {
+	/* display: grid;
+	grid-template-columns: repeat(5, 1fr); */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 50px;
+	gap: 24px;
+}
+.sponsor-container img {
+	filter: grayscale(1);
+}
+
+/* footer styles */
+footer {
+	background-color: rgba(255, 144, 14, 0.1);
+	text-align: center;
+	padding: 40px 5px;
+	margin-top: 130px;
+	margin-bottom: 130px;
+}
+
 /* responsive styles - small device */
 
 @media screen and (max-width: 576px) {
 	.nav-bar,
 	.nav-links,
 	.teams,
-	.features {
+	.features,
+	.fact,
+	.sponsor {
 		flex-direction: column;
 		text-align: center;
 	}
@@ -190,6 +262,7 @@ header {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		gap: 24px;
+		justify-items: center;
 	}
 	.teams .our-features {
 		margin-left: 5px;
@@ -204,6 +277,13 @@ header {
 	}
 	#features-title {
 		padding-left: 0;
+	}
+
+	.fact-card-container {
+		grid-template-columns: repeat(1, 1fr);
+		justify-items: center;
+		gap: 24px;
+		margin-top: 50px;
 	}
 }
 
@@ -226,5 +306,16 @@ header {
 	#experience-badge {
 		margin-left: 0px;
 		margin-top: 0px;
+	}
+	.fact {
+		text-align: center;
+	}
+	.fact-card-container {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		gap: 24px;
+	}
+	.fact p {
+		max-width: none;
 	}
 }
